@@ -38,7 +38,7 @@ user-home
             </div>
             <div class="card-body" style="display:flex;justify-content:space-evenly;">
               <div><a href="{% url 'admin_task_update' i.id %}" class="card-link edit"><i class="fa fa-thin fa-pen" style="color: #f08205;" title="Edit"></i></a></div>
-              <div><a href="{% url 'admin_task_update' i.id %}" class="card-link delete"><i class="fa fa-thin fa-trash" style="color: #f70202;"></i></a></div>
+              <div><a href="{% url 'admin_task_delete' i.id %}" class="card-link delete"><i class="fa fa-thin fa-trash" style="color: #f70202;"></i></a></div>
             </div>
           </div>
           {% endfor %}
