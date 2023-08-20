@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.container2 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.one{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+}
+.one .btn1 button{
+    height: 40px;
+    width: 150px;
+    border: skyblue solid 1px;
+    font-size: 20px;
+    
+}
+.one .btn1 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    
+}
+.two{
+    height: auto;
+    width: 700px;
+    border: solid 1px skyblue;
+    border-radius: 10px;
+    
+    
+}
+.card{
+    border: groove skyblue 1px;
+    border-radius: 10px;
+}
+.text{
+    font-size: 17px;
+}
+.card-body div a{
+    text-decoration: none;
+}
+.content{
+    margin: 30px;
+}
+.category{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}

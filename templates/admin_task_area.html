@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Add task
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css\admin_task_area.css' %}">
+<div class="container">
+    <div class="one">
+        <div class="btn1"><button><a href="{% url 'admin-home' %}">home</a></button></div>
+        <div class="btn1"><button><a href="{% url 'admin-task-area' %}">add task</a></button></div>
+        <div class="btn1"><button><a href="">{{request.user.username}}</a></button></div>
+        <div class="btn1"><button><a href="{% url 'logout' %}">logout</a></button></div>
+    </div>
+    <div class="two">
+        {% include 'messages.html' %}
+        <div class="container2">
+            <form action="" novalidate method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+        
+                <div class="img content">
+                    {{form.image}}
+                </div>
+                <div class="app-name content">
+                    {{form.app_name}}
+                </div>
+                <div class="category content">
+                    <div style='position:relative;right:10px'>
+                        <div>
+                            <label for="">App categroy</label>
+                        </div>
+                        {{form.app_category}}</div>
+                    <div style='position:relative;left:10px'>
+                        <div>
+                            <label for="">Sub category</label>
+                        </div>
+                        {{form.sub_category}}</div>
+                </div>
+                <div class="points content">
+                    {{form.points}}
+                </div>
+
+                <div class="submit content">
+                    <button type="submit" class="btn btn-success text-center">submit</button>
+                </div>
+        </div>
+
+
+
+    </div>
+    </form>
+   
+    <div class="three"></div>
+</div>
+
+
+
+
+{% endblock content %}

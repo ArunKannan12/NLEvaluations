@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+{% block content %}
+{% load static %}
+ 
+<link rel="stylesheet" href="{% static 'css\emp_form.css' %}" />
+<div class="container" style="">
+  <form
+    action=""
+    novalidate
+    method="POST"
+    enctype="multipart/form-data"
+    autocomplete="off"
+  >
+    {% csrf_token %}
+    <table>
+      <tr>
+          <td>{{form.app_name}}</td>
+          <td>{{form.image}}</td>
+      </tr>
+      <tr>
+          <td>{{form.app_category}}</td>
+          <td>{{form.sub_category}}</td>
+      </tr>
+      <tr>
+          <td>{{form.points}}</td>
+      </tr>
+      <tr>
+          <td><button type="submit">submi</button></td>
+      </tr>
+  </table>
+    
+  </form>
+{% endblock content %}
